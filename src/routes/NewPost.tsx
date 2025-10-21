@@ -1,6 +1,7 @@
 import { Form, redirect, useNavigate } from 'react-router-dom'
 
 // Action: 处理表单提交
+// eslint-disable-next-line react-refresh/only-export-components
 export async function action({ request }: { request: Request }) {
   const formData = await request.formData()
   const post = Object.fromEntries(formData)

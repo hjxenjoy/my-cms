@@ -2,6 +2,7 @@ import { useLoaderData } from 'react-router-dom'
 import { type Post } from '../types'
 
 // Loader 可以从父路由继承，也可以自己再获取一次
+// eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
   const response = await fetch('/api/posts')
   return response.json()

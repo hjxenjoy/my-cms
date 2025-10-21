@@ -1,7 +1,8 @@
-import { Outlet, useLoaderData, NavLink, Form } from 'react-router-dom'
+import { Outlet, useLoaderData, NavLink } from 'react-router-dom'
 import { type Post } from '../types'
 
 // Loader: 在组件渲染前加载数据
+// eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
   const response = await fetch('/api/posts')
   const posts = await response.json()

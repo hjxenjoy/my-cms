@@ -2,6 +2,7 @@ import { Form, useLoaderData, redirect, useNavigate } from 'react-router-dom'
 import { type Post } from '../types'
 
 // Loader: 获取特定 ID 的文章数据
+// eslint-disable-next-line react-refresh/only-export-components, @typescript-eslint/no-explicit-any
 export async function loader({ params }: any) {
   const response = await fetch(`/api/posts/${params.postId}`)
   if (!response.ok) {
@@ -11,6 +12,7 @@ export async function loader({ params }: any) {
 }
 
 // Action: 处理更新逻辑
+// eslint-disable-next-line react-refresh/only-export-components, @typescript-eslint/no-explicit-any
 export async function action({ request, params }: any) {
   const formData = await request.formData()
   const updates = Object.fromEntries(formData)
