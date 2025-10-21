@@ -1,4 +1,4 @@
-const fs = require('fs')
+import fs from 'fs'
 const tomlContent = process.env.WRANGLER_TOML_CONTENT
 
 if (tomlContent) {
